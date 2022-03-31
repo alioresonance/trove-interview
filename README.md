@@ -1,4 +1,4 @@
-# Trove SQA Automation Engineer Challenge
+# Trove QA Automation Engineer Challenge
 
 This repository is meant to provide Trove SQA Automation Engineeer interview candidates with a takehome interview challenge starting point. It includes:
 

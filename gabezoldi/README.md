@@ -7,7 +7,7 @@
 4. Install Maven 3: https://www.baeldung.com/install-maven-on-windows-linux-mac   https://maven.apache.org/download.cgi#
 5. [Optional] Install IntelliJ (Free Community Edition): https://www.jetbrains.com/idea/download
 
-**Running** Test
+**Running Test**
 1. Open Terminal (mac) or Git Bash (windows) window and run commands...
 ```
 mkdir github
@@ -16,6 +16,10 @@ git clone https://github.com/alioresonance/trove-interview.git
 cd trove-interview/gabezoldi
 mvn clean test
 ```
+
+**Test Run Recording**
+- https://github.com/alioresonance/trove-interview/blob/main/gabezoldi/test-run-recording.mp4?raw=true
+
 
 
 ![gravity-image](gcc.jpg)
