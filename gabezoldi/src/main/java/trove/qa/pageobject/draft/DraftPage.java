@@ -19,21 +19,6 @@ public class DraftPage extends TrovePageObject {
 
     // -----------------------------------------------------------------------------------------------------------------
     // ACTIONS
-    public DraftPage enterName(String name) {
-        $(NAME_INPUT).sendKeys(name);
-        return this;
-    }
-
-    public DraftPage enterEmailAddress(String email) {
-        $(EMAIL_ADDRESS_INPUT).sendKeys(email);
-        return this;
-    }
-
-    public DraftPage clickSignup() {
-        $(SIGNUP_BUTTON).click();
-        return this;
-    }
-
     public DraftPage deleteDraftOnThePage(int indexOf) {
         final int OFFSET = 1;
         getDriver().findElements(DRAFTS_LIST).get(indexOf - OFFSET).click();
