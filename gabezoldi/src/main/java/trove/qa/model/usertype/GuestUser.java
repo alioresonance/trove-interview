@@ -8,7 +8,7 @@ public class GuestUser {
         User guest = new User();
         guest.setFirstname("GaryGuest");
         guest.setLastname("WM");
-        guest.setEmail("garyguestwmqa@gmail.com");
+        guest.setEmail("garyguest@gmail.com");
         guest.setPassword(User.DEFAULT_PASSWORD);
         guest.setConfirmPassword(User.DEFAULT_PASSWORD);
         guest.setStayUpdated(false);

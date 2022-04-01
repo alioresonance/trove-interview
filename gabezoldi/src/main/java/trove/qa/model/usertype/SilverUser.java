@@ -8,7 +8,7 @@ public class SilverUser {
         User silver = new User();
         silver.setFirstname("SilviaSilver");
         silver.setLastname("WMQA");
-        silver.setEmail("silviasilverwmqa@gmail.com");
+        silver.setEmail("silviasilver@gmail.com");
         silver.setPassword(User.DEFAULT_PASSWORD);
         silver.setConfirmPassword(User.DEFAULT_PASSWORD);
         silver.setStayUpdated(false);

@@ -8,7 +8,7 @@ public class RetailUser {
         User retail = new User();
         retail.setFirstname("RonRetail");
         retail.setLastname("WMQA");
-        retail.setEmail("ronretailwmqa@gmail.com");
+        retail.setEmail("ronretail@gmail.com");
         retail.setPassword(User.DEFAULT_PASSWORD);
         retail.setConfirmPassword(User.DEFAULT_PASSWORD);
         retail.setStayUpdated(true);

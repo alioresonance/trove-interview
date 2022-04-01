@@ -9,16 +9,16 @@ public class ProUser {
         // TODO: Peter Pro user account is just a Retail account; it's not setup in the backend to be a Pro Account
         // TODO: Instead got different account from Srini to use for now
         //pro.setFirstname("PeterPro");
-        //pro.setEmail("peterprowmqa@gmail.com");
+        //pro.setEmail("peterpro@gmail.com");
         //pro.setPassword(User.DEFAULT_PASSWORD);
         //pro.setConfirmPassword(User.DEFAULT_PASSWORD);
 
         pro.setFirstname("ABB4676");
-        pro.setEmail("PRO4676@nonprod.sightly.com");
-        pro.setPassword("Sightly2@");
-        pro.setConfirmPassword("Sightly2@");
+        pro.setEmail("PRO4676@nonprod.trove.com");
+        pro.setPassword("Trove2@");
+        pro.setConfirmPassword("Trove2@");
 
-        pro.setLastname("SightlyQA");
+        pro.setLastname("TroveQA");
         pro.setStayUpdated(true);
         pro.setBillingAddress(Address.MAIN_ST_MILPITAS);
         pro.setShippingAddress(Address.FRANKLIN_ST_MOUNTAIN_VIEW);

@@ -8,7 +8,7 @@ public class GoldUser {
         User gold = new User();
         gold.setFirstname("GoldieGold");
         gold.setLastname("WMQA");
-        gold.setEmail("goldiegoldwmqa@gmail.com");
+        gold.setEmail("goldiegold@gmail.com");
         gold.setPassword(User.DEFAULT_PASSWORD);
         gold.setConfirmPassword(User.DEFAULT_PASSWORD);
         gold.setStayUpdated(false);
