@@ -19,7 +19,7 @@
         <encoding>UTF-8</encoding>
 
         <serenity.test.root>trove.qa</serenity.test.root>
-        <tags></tags>
+        <tags>ACCEPTANCE</tags>
     </properties>
 
     <repositories>

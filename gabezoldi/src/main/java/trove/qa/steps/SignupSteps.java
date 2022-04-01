@@ -7,15 +7,8 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import trove.qa.model.common.Expected;
 import trove.qa.model.common.User;
-import trove.qa.model.report.ReportSelection;
-import trove.qa.model.report.inputs.AdditionalColumns;
-import trove.qa.model.report.inputs.Granularity;
-import trove.qa.model.report.inputs.TimePeriod;
-import trove.qa.pageobject.LoginPage;
-import trove.qa.pageobject.NavigationPage;
-import trove.qa.pageobject.OrdersPage;
-import trove.qa.pageobject.ReportsPage;
-
+import trove.qa.pageobject.SignupPage;
+import trove.qa.pageobject.TweeterPage;
 import java.io.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -25,65 +18,49 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+public class SignupSteps extends AbstractSteps {
 
-public class CreateReportSteps extends AbstractSteps {
-
-    ReportsPage reportsPage;
+    TweeterPage tweeterPage;
+    SignupPage signupPage;
 
     EnvironmentVariables environmentVariables;
 
     // -----------------------------------------------------------------------------------------------------------------
     // STEPS
-    public CreateReportSteps starts_on_the_reports_page(User forThisUser) {
-        Expected.user = forThisUser;
-
-        /*
-         * below looks different just to give you different flavors of invocation methods;
-         * I do prefer Fluent method style LoginPage.enterEmail().enterPassword().clickLogIn();
-         */
-        // static
-        new LoginPage() {{
-            login(forThisUser);
-        }};
-
-        // constructor
-        new OrdersPage().verifyOrderPageDisplayed();
-        new NavigationPage().gotoReports();
-
-        // declaration
-        reportsPage.verifyReportsPageDisplayed();
-
-
+    public SignupSteps starts_on_the_tweeter_page() {
+        tweeterPage
+                .openBrowser()
+                .verifyTweeterPageDisplayed();
         String baseUrl = ThucydidesSystemProperty.WEBDRIVER_BASE_URL.from(environmentVariables);
         return this;
     }
 
-    public CreateReportSteps creates_a_report_for_order_name(String orderName) {
-        Expected.orderName = orderName;
-        new File(getDownloadedReportWith(orderName)).delete();
-        reportsPage
-                .clickALLTab()
-                .search(orderName)
-                .selectTheFirstOrderName()
-                .createReport(
-                        ReportSelection.PERFORMANCE_DETAIL_REPORT,
-                        Granularity.DAILY,
-                        AdditionalColumns.NONE,
-                        TimePeriod.ALL_TIME
-                );
+    public SignupSteps signup_as(User user) {
+        Expected.user = user;
+        tweeterPage.clickSignup();
+        signupPage
+                .enterName(user.getFullname())
+                .enterEmailAddress(user.getEmail())
+                .clickSignup();
         return this;
     }
 
     // -----------------------------------------------------------------------------------------------------------------
     // ASSERTIONS
-    public CreateReportSteps should_see_in_downloaded_report(String expectedCSVLineItem) {
+    public SignupSteps should_see_success_confirmation_message() {
+        assertThat(signupPage.getConfirmationMessage()).as("Invalid confirmation message")
+                .isEqualTo("Signup was successful.");
+        return this;
+    }
+
+    public SignupSteps should_see_in_downloaded_report(String expectedCSVLineItem) {
         List<String> actualDownloadReport = xslxToCSV(getDownloadedReportWith(Expected.orderName));
         assertThat(actualDownloadReport.contains(expectedCSVLineItem)).as("CSV Line Item not found: " + expectedCSVLineItem)
                 .isTrue();
         return this;
     }
 
-    public CreateReportSteps should_not_see_in_downloaded_report(String unexpectedCSVLineItem) {
+    public SignupSteps should_not_see_in_downloaded_report(String unexpectedCSVLineItem) {
         List<String> actualDownloadReport = xslxToCSV(getDownloadedReportWith(Expected.orderName));
         assertThat(actualDownloadReport.contains(unexpectedCSVLineItem)).as("CSV Line Item found: " + unexpectedCSVLineItem)
                 .isFalse();

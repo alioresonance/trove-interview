@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.stream.IntStream;
 
-public class SightlyPageObject extends PageObject {
+public class TrovePageObject extends PageObject {
 
     // -----------------------------------------------------------------------------------------------------------------
     // SELECTORS

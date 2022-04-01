@@ -4,17 +4,18 @@ import trove.qa.model.common.Address;
 import trove.qa.model.common.User;
 
 public class QAUser {
-    public static User user() {
-        User qaTester = new User();
-        qaTester.setFirstname("QA");
-        qaTester.setLastname("Tester");
-        qaTester.setEmail("qa-tester@qa-test.com");
-        qaTester.setPassword(User.DEFAULT_PASSWORD);
-        qaTester.setConfirmPassword(User.DEFAULT_PASSWORD);
-        qaTester.setStayUpdated(false);
-        qaTester.setBillingAddress(Address.FRANKLIN_ST_MOUNTAIN_VIEW);
-        qaTester.setShippingAddress(Address.MAIN_ST_MILPITAS);
-        qaTester.setUserType(UserType.RETAIL);
-        return qaTester;
+    public static User firstTimeUser() {
+        User firstime = new User();
+        firstime.setFirstname("FirstTime");
+        firstime.setLastname("User");
+        firstime.setFullname("FirstTime User");
+        firstime.setEmail("first-time-user@trove.co");
+        firstime.setPassword(User.DEFAULT_PASSWORD);
+        firstime.setConfirmPassword(User.DEFAULT_PASSWORD);
+        firstime.setStayUpdated(false);
+        firstime.setBillingAddress(Address.FRANKLIN_ST_MOUNTAIN_VIEW);
+        firstime.setShippingAddress(Address.MAIN_ST_MILPITAS);
+        firstime.setUserType(UserType.RETAIL);
+        return firstime;
     }
 }

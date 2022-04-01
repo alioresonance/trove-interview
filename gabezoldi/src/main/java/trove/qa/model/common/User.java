@@ -10,6 +10,7 @@ public class User {
 
     private String firstname;
     private String lastname;
+    private String fullname;
     private String email;
     private String password;
     private String confirmPassword;
@@ -33,7 +34,7 @@ public class User {
     public static User goldieGold() {
         return GoldUser.user();
     }
-    public static User qaTester() {
-        return QAUser.user();
+    public static User firstTimeUser() {
+        return QAUser.firstTimeUser();
     }
 }

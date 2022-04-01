@@ -14,7 +14,8 @@ mkdir github
 cd github
 git clone https://github.com/alioresonance/trove-interview.git
 cd trove-interview/gabezoldi
-mvn clean test
+mvn clean install
+mvn test
 ```
 
 **Test Run Recording**
