@@ -18,9 +18,6 @@ mvn clean install
 mvn test
 ```
 
-**Test Run Recording**
-- https://github.com/alioresonance/trove-interview/blob/main/gabezoldi/test-run-recording.mp4?raw=true
-
 
 
 ![gravity-image](gcc.jpg)
