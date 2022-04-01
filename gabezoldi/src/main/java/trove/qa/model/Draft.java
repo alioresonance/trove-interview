@@ -1,4 +1,4 @@
-package trove.qa.model.draft;
+package trove.qa.model;
 
 import java.util.Arrays;
 

@@ -5,16 +5,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
-
-import static org.assertj.core.api.Assertions.assertThat;
-
 public class TweeterPage extends TrovePageObject {
 
     // -----------------------------------------------------------------------------------------------------------------
     // SELECTORS
     private static final By TITLE_TEXT = By.cssSelector("#__next h1");
-    private static final By DRAFTS_LINK = By.linkText("Drafts");
     private static final By SIGNUP_BUTTON = By.linkText("Signup");
     private static final By CREATE_DRAFT_BUTTON = By.linkText("+ Create draft");
 

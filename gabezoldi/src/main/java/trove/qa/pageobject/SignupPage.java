@@ -1,8 +1,6 @@
 package trove.qa.pageobject;
 
-import net.serenitybdd.core.pages.WebElementFacade;
 import org.openqa.selenium.By;
-import java.time.Duration;
 
 public class SignupPage extends TrovePageObject {
 
@@ -49,8 +47,5 @@ public class SignupPage extends TrovePageObject {
 
     // -----------------------------------------------------------------------------------------------------------------
     // VERIFY
-    public SignupPage verifyTweeterPageDisplayed() {
-        //withTimeoutOf(Duration.ofSeconds(20)).waitFor(TITLE_TEXT);
-        return this;
-    }
+
 }

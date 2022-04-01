@@ -3,7 +3,7 @@ package trove.qa.steps;
 import net.thucydides.core.ThucydidesSystemProperty;
 import net.thucydides.core.util.EnvironmentVariables;
 import trove.qa.model.common.Expected;
-import trove.qa.model.draft.Draft;
+import trove.qa.model.Draft;
 import trove.qa.pageobject.draft.CreateDraftPage;
 import trove.qa.pageobject.draft.DraftPage;
 import trove.qa.pageobject.TweeterPage;

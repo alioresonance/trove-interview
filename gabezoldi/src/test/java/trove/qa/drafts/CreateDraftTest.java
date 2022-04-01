@@ -6,7 +6,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import trove.qa.BaseTest;
-import trove.qa.model.draft.Draft;
+import trove.qa.model.Draft;
 import trove.qa.steps.DraftsSteps;
 
 @RunWith(SerenityRunner.class)

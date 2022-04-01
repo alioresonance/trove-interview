@@ -1,7 +1,7 @@
 package trove.qa.model.common;
 
 import lombok.Data;
-import trove.qa.model.draft.Draft;
+import trove.qa.model.Draft;
 
 @Data
 public class Expected {

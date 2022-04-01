@@ -26,5 +26,4 @@ public class DeleteDraftTest extends BaseTest {
                 .deletes_first_draft_on_page()
                 .should_see_drafts_list_empty();
     }
-
 }

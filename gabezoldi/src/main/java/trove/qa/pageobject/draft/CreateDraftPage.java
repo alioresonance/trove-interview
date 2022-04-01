@@ -1,7 +1,7 @@
 package trove.qa.pageobject.draft;
 
 import org.openqa.selenium.By;
-import trove.qa.model.draft.Draft;
+import trove.qa.model.Draft;
 import trove.qa.pageobject.TrovePageObject;
 
 public class CreateDraftPage extends TrovePageObject {
