@@ -18,7 +18,7 @@ mvn clean install
 mvn test
 ```
 
-[test-run-recording.mp4](https://mega.nz/file/thl1HQxL#umA723eVwPIlkWbubUa-DPNiBc9mHfNumwyd7ctf10Q)
+---> [test-run-recording.mp4](https://mega.nz/file/thl1HQxL#umA723eVwPIlkWbubUa-DPNiBc9mHfNumwyd7ctf10Q) <---
 
 
 
